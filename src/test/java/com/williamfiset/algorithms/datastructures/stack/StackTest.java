@@ -47,26 +47,6 @@ public class StackTest {
     }
   }
 
-//  @ParameterizedTest
-//  @MethodSource("inputs")
-//  public void testPushIncreasesCapacityWhenStackIsFull(Stack<Integer> stack) {
-//    // Given
-//    ArrayStack<Integer> arrayStack = (ArrayStack<Integer>) stack;
-//    // Fill the stack to its initial capacity
-//    for (int i = 0; i < 16; i++) {
-//      stack.push(i);
-//    }
-//
-//    // When
-//    stack.push(16); // Try pushing one more element when stack is full
-//
-//    // Then
-//    assertThat(arrayStack.size()).isEqualTo(17); // Assert that size is now 17 after pushing
-//    assertThat(arrayStack.getCapacity()).isEqualTo(32); // Assert that capacity has doubled
-//
-//  }
-
-
   @ParameterizedTest
   @MethodSource("inputs")
   public void testPeek(Stack<Integer> stack) {
