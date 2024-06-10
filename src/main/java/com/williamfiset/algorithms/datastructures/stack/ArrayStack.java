@@ -17,6 +17,10 @@ public class ArrayStack<T> implements Stack<T> {
     data = new Object[capacity];
   }
 
+  public int getCapacity() {
+    return capacity;
+  }
+
   @Override
   public int size() {
     return size;
@@ -31,6 +35,7 @@ public class ArrayStack<T> implements Stack<T> {
   public void push(T elem) {
     CoverageTracker.setBranchReached(1);
     if (size == capacity) {
+      CoverageTracker.setBranchReached(2);
       increaseCapacity();
     }
     // Instrumentation: Set a flag before the first statement
@@ -44,7 +49,6 @@ public class ArrayStack<T> implements Stack<T> {
   // Increase the capacity to store more elements.
   private void increaseCapacity() {
     // Branch ID: 2
-    CoverageTracker.setBranchReached(2);
     capacity *= 2;
     data = Arrays.copyOf(data, capacity);
   }
@@ -71,7 +75,7 @@ public class ArrayStack<T> implements Stack<T> {
     // Initialize branch coverage map with branch IDs and set all flags to false
     static {
       branchCoverage.put(1, false); // Branch ID for entering method
-      branchCoverage.put(2, false); // Branch ID for increaseCapacity() method
+      branchCoverage.put(2, false); // Branch ID for size = capacity
       branchCoverage.put(3, false); // Branch ID for data[size++]
     }
 
