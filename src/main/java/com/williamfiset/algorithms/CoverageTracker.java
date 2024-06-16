@@ -11,6 +11,16 @@ public class CoverageTracker {
         branchCoverage.put(branchID, true);
     }
 
+    public static void clearBranches() {
+        branchCoverage = new HashMap<>();
+    }
+
+    public static void setTotalBranches(int branches) {
+        for(int i = 0; i < branches; i++) {
+            branchCoverage.put(i, false);
+        }
+    }
+
     // Method to get coverage information
     public static Map<Integer, Boolean> getBranchCoverage() {
         return branchCoverage;
