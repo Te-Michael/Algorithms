@@ -10,19 +10,12 @@ public class CoverageTracker {
     public static void setBranchReached(int branchID) {
         branchCoverage.put(branchID, true);
     }
-
-
     public static void setTotalBranches(int branches) {
         for(int i = 0; i < branches; i++) {
             branchCoverage.put(i, false);
         }
     }
-
-    // Method to get coverage information
-    public static Map<Integer, Boolean> getBranchCoverage() {
-        return branchCoverage;
-    }
-
+    
     // Method to write branch coverage information to console
     public static void writeCoverageToConsole() {
         System.out.println("Branch Coverage Information:");
