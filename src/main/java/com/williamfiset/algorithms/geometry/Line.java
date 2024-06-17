@@ -5,6 +5,8 @@
  */
 package com.williamfiset.algorithms.geometry;
 
+import com.williamfiset.algorithms.CoverageTracker;
+
 import static java.lang.Math.*;
 
 import java.awt.geom.Point2D;
@@ -33,12 +35,17 @@ public class Line {
 
   // Constructs a line from a slope and a point
   public static Line slopePointToLine(double slope, Point2D pt) {
+    CoverageTracker.setBranchReached(0);
     Point2D p2 = null;
     if (slope == Double.POSITIVE_INFINITY || slope == Double.NEGATIVE_INFINITY) {
       p2 = new Point2D.Double(pt.getX(), pt.getY() + 1);
+      CoverageTracker.setBranchReached(1);
+
     } else {
       p2 = new Point2D.Double(pt.getX() + 1, pt.getY() + slope);
+      CoverageTracker.setBranchReached(2);
     }
+    CoverageTracker.setBranchReached(3);
     return new Line(pt, p2);
   }
 
