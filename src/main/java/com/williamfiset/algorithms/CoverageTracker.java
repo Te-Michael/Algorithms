@@ -5,18 +5,14 @@ import java.util.Map;
 
 public class CoverageTracker {
     private static Map<Integer, Boolean> branchCoverage = new HashMap<>();
-
-    // Method to set a flag for a branch when it's reached
     public static void setBranchReached(int branchID) {
         branchCoverage.put(branchID, true);
     }
-
     public static void setTotalBranches(int branches) {
         for(int i = 0; i < branches; i++) {
             branchCoverage.put(i, false);
         }
     }
-    
     public static void writeCoverageToConsole() {
         System.out.println("Branch Coverage Information:");
         for (Map.Entry<Integer, Boolean> entry : branchCoverage.entrySet()) {
