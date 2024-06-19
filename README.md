@@ -44,7 +44,8 @@ https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3
 <Group member name>
 
 testPush();<br>
-
+![no alt](readMeImages/testPush.png)
+<br>
 https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
 
 old coverage:
@@ -57,8 +58,10 @@ new coverage:
 <br><br>
 The reason the coverage was improved was due to the implementation of testPush for arrayStack. When the stack reached 16 it is supposed to double in capacity. However, nothing was testing that clause. The function testPush tests that case, and hence covers it. it goes from 2/3rds covered to 3/3rds covered
 <br><br>
+testNegativeCycle(); 
+<br>
+![no alt](readMeImages/testNegativeCycle.png)
 
-testNegativeCycle(); <br>
 https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3bb7ea790
 <br>
 old coverage:
