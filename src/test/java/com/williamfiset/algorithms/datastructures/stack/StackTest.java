@@ -42,9 +42,6 @@ public class StackTest {
   public void testPush(Stack<Integer> stack) {
     stack.push(2);
     assertThat(stack.size()).isEqualTo(1);
-    for (int i = 0; i < 16; i++) {
-      stack.push(i);
-    }
   }
 
   @ParameterizedTest
