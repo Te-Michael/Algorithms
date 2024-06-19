@@ -1,41 +1,206 @@
-## Work done in mt_branch1:
+# Report for Assignment 1
 
-The `ArrayStack` class contains the `push` function [here](src/main/java/com/williamfiset/algorithms/datastructures/stack/ArrayStack.java). <br>
-The `ArrayStackTest` class contains the test for push, called: `testPush` [here](src/test/java/com/williamfiset/algorithms/datastructures/stack/ArrayStackTest.java).
-<br><br>
-In the image below, we’re checking coverage for testPush through the intellij coverage tester. <br><br>
+## Project chosen
+
+Name: williamfiset/Algorithms
+
+URL: https://github.com/williamfiset/Algorithms
+
+Number of lines of code and the tool used to count it: 31 kloc, lizard
+
+Programming language: Java
+
+## Coverage measurement
+
+### Existing tool
+
+The tool that was used was the built in Intellij Coverage tool. We used the tool on the entire tests folder.
+
+<Show the coverage results provided by the existing tool with a screenshot>
+
 ![no alt](readMeImages/branch1img1.png)
+# work by Michael Tedeev
 
-We can see initially it's 2/3rds covered. as size == capacity is not covered (this can be seen with the red and green lines)
-<br><br>
-In the image below, we’re checking coverage with our own tool, and I have the same output 2/3rds.
+### Your own coverage tool
+
+
+
+Fuction name: push();
+
+https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
+<Provide a screenshot of the coverage results output by the instrumentation>
 ![no alt](readMeImages/branch1img2.png)
-<br> <br>
-In the image below, we added the testPush function to improve coverage. We do this by checking whether the  size == capacity which wasn’t checked before. This increases coverage to 3/3 (100%)<br>
-![no alt](readMeImages/branch1img3.png)
-<br><br>
-In the image below, we can see that the built-in tool also states 100% coverage
-![no alt](readMeImages/branch1img4.png)
+Fuction name: floydWarshall();
 
-## Work done in mt_branch2:
+https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3bb7ea790
+![no alt](readMeImages/branch2img1.png)
+## Coverage improvement
 
-The `SteinerTree` class contains the `floydWarshall` function [here](src/main/java/com/williamfiset/algorithms/graphtheory/SteinerTree.java). <br>
-The `SteinerTreeTest` class contains the tests for the Steiner Trees [here](src/test/java/com/williamfiset/algorithms/graphtheory/SteinerTreeTest.java).
-<br><br>
-Within the floydWarshall function we need to check whether the steiner tree has a negative cycle, since negative cycles can invalidate any distance calculation.
-<br><br>
-as seen in the image below, when tested with intellij coverage testing, the entire function is covered, except for the check for the negative cycle.
+### Individual tests
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+testPush();<br>
+
+https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
+
+old coverage:
+![no alt](readMeImages/branch1img2.png)
 <br>
+new coverage:
+![no alt](readMeImages/branch1img3.png)
+
+<br><br>
+The reason the coverage was improved was due to the implementation of testPush for arrayStack. When the stack reached 16 it is supposed to double in capacity. However, nothing was testing that clause. The function testPush tests that case, and hence covers it. it goes from 2/3rds covered to 3/3rds covered
+<br><br>
+
+testNegativeCycle(); <br>
+https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3bb7ea790
+<br>
+old coverage:
 ![no alt](readMeImages/branch2img1.png)
 <br>
-In the image below, we’re checking coverage with our own tool and we get 1/3rd coverage on the final iteration, since it doesn't check for negative cycles nor for setting negative infinity
-<br>
+new coverage:
 ![no alt](readMeImages/branch2img2.png)
-<br><br>
-In the image below, you can see an added test `testNegativeCycle` which introduces a negative cycle to be tested to improve coverage
-<br><br>
-![no alt](readMeImages/branch2img3.png)
-<br><br>
-With the addition of this function, the coverage has been improved to 100% both in our own tool and in intellij coverage tool as can be seen in the image below:
 <br>
-![no alt](readMeImages/branch2img4.png)
+The coverage here was improved due to the implementation of testNegativeCycle(); In the source code, there is a special case if the MST-like datastructure has a negative cycle as that would invalidate the measurment. So my test covers that , whereas before it wasnt covered. The coverage goes from 1/3rd to 3/3rds
+
+# work by Oliwer Dembicki
+## Coverage measurement
+
+
+### Your own coverage tool
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+<Function 1 name>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+
+<Provide a screenshot of the coverage results output by the instrumentation>
+
+<Function 2 name>
+
+<Provide the same kind of information provided for Function 1>
+
+## Coverage improvement
+
+### Individual tests
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+<Test 1>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+
+<Provide a screenshot of the old coverage results (the same as you already showed above)>
+
+<Provide a screenshot of the new coverage results>
+
+<State the coverage improvement with a number and elaborate on why the coverage is improved>
+
+<Test 2>
+
+<Provide the same kind of information provided for Test 1>
+
+
+# work by Alun Arkananta
+## Coverage measurement
+
+### Your own coverage tool
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+<Function 1 name>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+
+<Provide a screenshot of the coverage results output by the instrumentation>
+
+<Function 2 name>
+
+<Provide the same kind of information provided for Function 1>
+
+## Coverage improvement
+
+### Individual tests
+
+<The following is supposed to be repeated for each group member>
+
+<Group member name>
+
+<Test 1>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+
+<Provide a screenshot of the old coverage results (the same as you already showed above)>
+
+<Provide a screenshot of the new coverage results>
+
+<State the coverage improvement with a number and elaborate on why the coverage is improved>
+
+<Test 2>
+
+<Provide the same kind of information provided for Test 1>
+
+
+# work by Hugo Sokolowski-Katzer
+## Coverage measurement
+
+### Your own coverage tool
+
+< The following is supposed to be repeated for each group member>
+
+< Group member name>
+
+<Function 1 name>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+
+< Provide a screenshot of the coverage results output by the instrumentation>
+
+<Function 2 name>
+
+<Provide the same kind of information provided for Function 1>
+
+## Coverage improvement
+
+### Individual tests
+
+< The following is supposed to be repeated for each group member>
+
+< Group member name>
+
+<Test 1>
+
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+
+<Provide a screenshot of the old coverage results (the same as you already showed above)>
+
+< Provide a screenshot of the new coverage results>
+
+< State the coverage improvement with a number and elaborate on why the coverage is improved>
+
+<Test 2>
+
+<Provide the same kind of information provided for Test 1>
+
+### Overall
+
+<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+
+< Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+
+
+## Statement of individual contributions
+
+< describe what each group member did>
+
