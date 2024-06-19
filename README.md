@@ -30,6 +30,7 @@ Fuction name: push();
 https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
 <Provide a screenshot of the coverage results output by the instrumentation>
 ![no alt](readMeImages/branch1img2.png)
+<br>
 Fuction name: floydWarshall();
 
 https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3bb7ea790
@@ -47,11 +48,12 @@ testPush();<br>
 https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
 
 old coverage:
+<br>
 ![no alt](readMeImages/branch1img2.png)
 <br>
 new coverage:
 ![no alt](readMeImages/branch1img3.png)
-
+<br>
 <br><br>
 The reason the coverage was improved was due to the implementation of testPush for arrayStack. When the stack reached 16 it is supposed to double in capacity. However, nothing was testing that clause. The function testPush tests that case, and hence covers it. it goes from 2/3rds covered to 3/3rds covered
 <br><br>
@@ -60,13 +62,14 @@ testNegativeCycle(); <br>
 https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3bb7ea790
 <br>
 old coverage:
+<br>
 ![no alt](readMeImages/branch2img1.png)
 <br>
-new coverage:
+new coverage:<br>
 ![no alt](readMeImages/branch2img2.png)
 <br>
 The coverage here was improved due to the implementation of testNegativeCycle(); In the source code, there is a special case if the MST-like datastructure has a negative cycle as that would invalidate the measurment. So my test covers that , whereas before it wasnt covered. The coverage goes from 1/3rd to 3/3rds
-
+<br>
 # work by Oliwer Dembicki
 ## Coverage measurement
 
