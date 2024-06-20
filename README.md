@@ -148,13 +148,13 @@ The coverage in the function BinarySearch was improved with an introduction of t
 
 <Group member name>
 
-<Function 1 name>
+Function 1: isPrime
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-<Function 2 name>
+Function 2: intersection()
 
 <Provide the same kind of information provided for Function 1>
 
@@ -178,7 +178,27 @@ The coverage in the function BinarySearch was improved with an introduction of t
 
 <Test 2>
 
-<Provide the same kind of information provided for Test 1>
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+
+Old coverage:
+![aa2intellijcoverage1.png](readMeImages/aa2intellijcoverage1.png)
+![aa2oldtest1.PNG](readMeImages/aa2oldtest1.PNG)
+![aa2oldtest1-3.PNG](readMeImages/aa2oldtest1-3.PNG)
+![aa2oldtest1-2.PNG](readMeImages/aa2oldtest1-2.PNG)
+![aa2owncoveragetoolold.PNG](readMeImages/aa2owncoveragetoolold.PNG)
+
+New coverage:
+![aa2finalcoveragetest.jpg](readMeImages/aa2finalcoveragetest.jpg)
+![aa2intellijcoverage2.jpg](readMeImages/aa2intellijcoverage2.jpg)
+![aa2intellijcoverage3.jpg](readMeImages/aa2intellijcoverage3.jpg)
+![aa2intellijcoverage4.jpg](readMeImages/aa2intellijcoverage4.jpg)
+
+The coverage of the tests was increased from 0% to 100%. The intersection() function branched primarily to cover cases in
+which lines were horizontal or vertical. If not, then a general formula was used to find the intersection. The tests thus 
+focused on providing horizontal or vertical lines to achieve coverage in these branches. The normalise() function was also
+called in intersection(), and itself also had an if condition that checked for a line with a b the was (close) to zero.
+Lastly, we test to assert that non-horizontal/vertical lines return the expected intersection point. (0,0) was chosen for
+simplicity.
 
 
 # work by Hugo Sokolowski-Katzer
