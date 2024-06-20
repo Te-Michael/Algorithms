@@ -194,11 +194,13 @@ New coverage:
 ![aa2intellijcoverage4.jpg](readMeImages/aa2intellijcoverage4.jpg)
 
 The coverage of the tests was increased from 0% to 100%. The intersection() function branched primarily to cover cases in
-which lines were horizontal or vertical. If not, then a general formula was used to find the intersection. The tests thus 
+which lines were horizontal or vertical. If not, then a general formula was used to find the intersection. We test for 
+the various conditions of each branch, which are mostly concerned  with the b and a values in the formula ax + by = c.The tests thus 
 focused on providing horizontal or vertical lines to achieve coverage in these branches. The normalise() function was also
 called in intersection(), and itself also had an if condition that checked for a line with a b the was (close) to zero.
 Lastly, we test to assert that non-horizontal/vertical lines return the expected intersection point. (0,0) was chosen for
 simplicity.
+
 
 
 # work by Hugo Sokolowski-Katzer
