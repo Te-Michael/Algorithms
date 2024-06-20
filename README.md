@@ -79,20 +79,17 @@ The coverage here was improved due to the implementation of testNegativeCycle();
 
 ### Your own coverage tool
 
-<The following is supposed to be repeated for each group member>
+Fuction name: slopePointToLine();
 
-<Group member name>
-
-<Function 1 name>
-
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
-
+https://github.com/Te-Michael/Algorithms/commit/f4a8a3451debcaecc1d3eb70e4c042a0c33c6388
 <Provide a screenshot of the coverage results output by the instrumentation>
+![no alt](readMeImages/odbranch1beforeimprovement.jpeg)
+<br>
+<br>
+Fuction name: binarySearch();
 
-<Function 2 name>
-
-<Provide the same kind of information provided for Function 1>
-
+https://github.com/Te-Michael/Algorithms/commit/9da15378bceaedf5254d22cf15eaac09c679be1a
+![no alt](readMeImages/odbranch2beforeimprovement.jpeg)
 ## Coverage improvement
 
 ### Individual tests
@@ -101,20 +98,46 @@ The coverage here was improved due to the implementation of testNegativeCycle();
 
 <Group member name>
 
-<Test 1>
+lineTest();<br>
+![no alt](readMeImages/odbranch1tests.jpeg)
+<br>
+<br>
+https://github.com/Te-Michael/Algorithms/commit/f4a8a3451debcaecc1d3eb70e4c042a0c33c6388
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+old coverage:
+<br>
+<br>
+![no alt](readMeImages/odbranch1beforeimprovement.jpeg)
+<br>
+<br>
+new coverage:
+<br>
+<br>
+![no alt](readMeImages/odbranch1afterimprovement.jpeg)
+<br>
+<br><br>
+This function had no coverage at all before the implementation of lineTests. I had to create my own Class for testing and fill it myself. This was done with 3 tests, under normal (decided to test for positive instead of both negative and positive because that was enough for the tests), negative infinity and positive infinity assumptions. The tests basically check the behavior of the lines based on given slopes/assumptions and makes sure they behave correctly. These tests change the coverage from 0% 0/4 to 100% 4/4.
+<br><br>
+BinarySearchTest();
+<br><br>
+![no alt](readMeImages/odbranch2tests.jpeg)
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
-
-<Provide a screenshot of the new coverage results>
-
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
-
-<Test 2>
-
-<Provide the same kind of information provided for Test 1>
-
+https://github.com/Te-Michael/Algorithms/commit/9da15378bceaedf5254d22cf15eaac09c679be1a
+<br>
+<br>
+old coverage:
+<br>
+<br>
+![no alt](readMeImages/odbranch2beforeimprovement.jpeg)
+<br>
+<br>
+new coverage:<br>
+<br>
+![no alt](readMeImages/odbranch2afterimprovement.jpeg)
+<br>
+<br>
+The coverage in the function BinarySearch was improved with an introduction of the tests in BinarySearchTest(); We check coverage via specific cases mentioned in the main function like Square Root and Radius of a sphere. In, e.g. Square Root test we assume an outcome of result * result will be super close to the target value (using small epsilon). It is done in similar fashion in the Sphere Radius. Besides that we also check for the invalid bounds when the lo variable is greater or higher than the hi variable. Overall the tests cover different scenarios where the binary search algorithm is applied in different scenarios. This changes the coverage from 0/5 to 5/5, making it a 100%.
+<br>
 
 # work by Alun Arkananta
 ## Coverage measurement
