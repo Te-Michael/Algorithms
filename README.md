@@ -149,7 +149,7 @@ The coverage in the function BinarySearch was improved with an introduction of t
 Function 1: isPrime()
 https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f
 
-![aa1primetestbefore.PNG](readMeImages%2Faa1primetestbefore.PNG)
+![aa1primetestbefore.PNG](readMeImages/aa1primetestbefore.PNG)
 
 Function 2: intersection()
 https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10
@@ -160,9 +160,9 @@ https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7
 
 ### Individual tests
 
-<Test 1>
+Test 1: PrimeTest() https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f <br>
+![primetestfunction.PNG](readMeImages/primetestfunction.PNG)<br>
 
-https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f
 Old coverage:<br>
 ![aa1coveragebefore.PNG](readMeImages/aa1coveragebefore.PNG)
 ![aa1primetestbefore.PNG](readMeImages/aa1primetestbefore.PNG)
@@ -176,9 +176,10 @@ and checking the return value. The original file has a main() (not necessarily a
 show the output, but all the numbers are prime and doesn't check for non-prime numbers. Regardless, coverage is assumed
 to be zero as there was originally no test function in the test package.
 
-<Test 2>
+Test 2: LineTest.testCoverage() https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10 <br>
+![linetest1.PNG](readMeImages/linetest1.PNG)
+![linetest2.PNG](readMeImages/linetest2.PNG) <br>
 
-https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10
 
 Old coverage: <br>
 ![aa2intellijcoverage1.png](readMeImages/aa2intellijcoverage1.png)
