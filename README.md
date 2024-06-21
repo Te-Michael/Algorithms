@@ -212,13 +212,13 @@ simplicity.
 
 < Group member name>
 
-<Function 1 name>
+<Function 1: mult()>
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
-< Provide a screenshot of the coverage results output by the instrumentation>
+![no alt](readMeImages\mult.png)
 
-<Function 2 name>
+<Function 2: getPerpBisector()>
 
 <Provide the same kind of information provided for Function 1>
 
@@ -233,17 +233,27 @@ simplicity.
 <Test 1>
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+<https://github.com/Te-Michael/Algorithms/commit/90cfb1c6abe35cbc1a16b821d2a2fea467d2b227>
 
 <Provide a screenshot of the old coverage results (the same as you already showed above)>
+![no alt](readMeImages\mult.png)
 
 < Provide a screenshot of the new coverage results>
 
+![no alt](readMeImages\multAfter.png)
+
 < State the coverage improvement with a number and elaborate on why the coverage is improved>
+<The coverage is now 75%, this is an improvement since previously the coverage was 0%, the improvement is due to the fact that the test now forces the function to access almost all of its branches by giving various different polynomials to calculate>
 
 <Test 2>
 
 <Provide the same kind of information provided for Test 1>
+<https://github.com/Te-Michael/Algorithms/commit/122523211956db409299cbc98d2229cf91ed905c>
 
+![no alt](readMeImages\bipBefore.png)
+![no alt](readMeImages\bipAfter.png)
+
+<Here again the coverage started out at 0%, it is now 100%. This is because we created a test which provides two different pairs of points which force the function to traverse all its branches, the different points are necessary due to the branching conditions such as z < 0>>
 ### Overall
 
 <Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
