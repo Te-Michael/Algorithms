@@ -210,13 +210,13 @@ Function 1: mult()
 <br>
 https://github.com/Te-Michael/Algorithms/commit/90cfb1c6abe35cbc1a16b821d2a2fea467d2b227
 <br>
-![no alt](readMeImages\mult.png)
+![no alt](readMeImages/mult.png)
 <br>
 Function 2: getPerpBisector()
 <br>
 https://github.com/Te-Michael/Algorithms/commit/122523211956db409299cbc98d2229cf91ed905c
 <br>
-![no alt](readMeImages\bipBefore.png)
+![no alt](readMeImages/bipBefore.png)
 <br>
 ## Coverage improvement
 ### Individual tests
