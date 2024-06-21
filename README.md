@@ -146,48 +146,48 @@ The coverage in the function BinarySearch was improved with an introduction of t
 
 <The following is supposed to be repeated for each group member>
 
-<Group member name>
+Function 1: isPrime()
+https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f
 
-Function 1: isPrime
-
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
-
-<Provide a screenshot of the coverage results output by the instrumentation>
+![aa1primetestbefore.PNG](readMeImages%2Faa1primetestbefore.PNG)
 
 Function 2: intersection()
+https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10
 
-<Provide the same kind of information provided for Function 1>
+![aa2owncoveragetoolold.PNG](readMeImages/aa2owncoveragetoolold.PNG)
 
 ## Coverage improvement
 
 ### Individual tests
 
-<The following is supposed to be repeated for each group member>
-
-<Group member name>
-
 <Test 1>
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f
+Old coverage:<br>
+![aa1coveragebefore.PNG](readMeImages/aa1coveragebefore.PNG)
+![aa1primetestbefore.PNG](readMeImages/aa1primetestbefore.PNG)
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
+New coverage:<br>
+![aa1coverageafter.PNG](readMeImages/aa1coverageafter.PNG)
+![aa1primetestafter.PNG](readMeImages/aa1primetestafter.PNG)
 
-<Provide a screenshot of the new coverage results>
-
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
+The coverage was improved from 0% to 100%. The test is relatively simple, by giving numbers that are known to (not) be prime,
+and checking the return value. The original file has a main() (not necessarily a test) function that runs the function to 
+show the output, but all the numbers are prime and doesn't check for non-prime numbers. Regardless, coverage is assumed
+to be zero as there was originally no test function in the test package.
 
 <Test 2>
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10
 
-Old coverage:
+Old coverage: <br>
 ![aa2intellijcoverage1.png](readMeImages/aa2intellijcoverage1.png)
 ![aa2oldtest1.PNG](readMeImages/aa2oldtest1.PNG)
 ![aa2oldtest1-3.PNG](readMeImages/aa2oldtest1-3.PNG)
 ![aa2oldtest1-2.PNG](readMeImages/aa2oldtest1-2.PNG)
 ![aa2owncoveragetoolold.PNG](readMeImages/aa2owncoveragetoolold.PNG)
 
-New coverage:
+New coverage: <br>
 ![aa2finalcoveragetest.jpg](readMeImages/aa2finalcoveragetest.jpg)
 ![aa2intellijcoverage2.jpg](readMeImages/aa2intellijcoverage2.jpg)
 ![aa2intellijcoverage3.jpg](readMeImages/aa2intellijcoverage3.jpg)
@@ -201,7 +201,7 @@ called in intersection(), and itself also had an if condition that checked for a
 Lastly, we test to assert that non-horizontal/vertical lines return the expected intersection point. (0,0) was chosen for
 simplicity.
 
-
+ 
 
 # work by Hugo Sokolowski-Katzer
 ## Coverage measurement
