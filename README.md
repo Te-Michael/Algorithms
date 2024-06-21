@@ -223,34 +223,34 @@ https://github.com/Te-Michael/Algorithms/commit/122523211956db409299cbc98d2229cf
 
 testMultiply();
 <br>
-![no alt](readMeImages\multTest.png)
+![no alt](readMeImages/multTest.png)
 <br>
 <https://github.com/Te-Michael/Algorithms/commit/90cfb1c6abe35cbc1a16b821d2a2fea467d2b227>
 <br>
 before:
 <br>
-![no alt](readMeImages\mult.png)
+![no alt](readMeImages/mult.png)
 <br>
 after:
 <br>
-![no alt](readMeImages\multAfter.png)
+![no alt](readMeImages/multAfter.png)
 <br>
 The coverage is now 75%, this is an improvement since previously the coverage was 0%, the improvement is due to the fact that the test now forces the function to access almost all of its branches by giving various different polynomials to calculate
 <br>
 <br>
 testGetPerpBisector();
 <br>
-![no alt](readMeImages\bipTest.png)
+![no alt](readMeImages/bipTest.png)
 <br>
 <https://github.com/Te-Michael/Algorithms/commit/122523211956db409299cbc98d2229cf91ed905c>
 <br>
 before:
 <br>
-![no alt](readMeImages\bipBefore.png)
+![no alt](readMeImages/bipBefore.png)
 <br>
 After:
 <br>
-![no alt](readMeImages\bipAfter.png)
+![no alt](readMeImages/bipAfter.png)
 <br>
 Here again the coverage started out at 0%, it is now 100%. This is because we created a test which provides two different pairs of points which force the function to traverse all its branches, the different points are necessary due to the branching conditions such as z < 0>
 ### Overall
