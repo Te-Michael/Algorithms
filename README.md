@@ -98,7 +98,7 @@ https://github.com/Te-Michael/Algorithms/commit/9da15378bceaedf5254d22cf15eaac09
 
 <Group member name>
 
-test 1: lineTest();<br>
+test 1: Slope-related tests in lineTest();<br>
 ![no alt](readMeImages/odbranch1tests.jpeg)
 <br>
 <br>
@@ -109,7 +109,7 @@ old coverage:
 <br>
 ![no alt](readMeImages/odbranch1beforeimprovement.jpeg)
 <br>
-<br>
+<br>~~~~
 new coverage:
 <br>
 <br>
@@ -272,7 +272,7 @@ but to summarise:
 <br><br>
 testPush(); - Michael Tedeev<br><br>
 testNegativeCycle(); - Michael Tedeev<br><br>
-some functions in the line class - Oliwer Dembicki<br><br>
+testSlopePointToLine(), testSlopePointToLinePositiveInfinitySlope(), testSlopePointToLineNegativeInfinitySlope() in LineTest(); - Oliwer Dembicki<br><br>
 BinarySearchTest(); - Oliwer Dembicki<br><br>
 some functions in the line class - Alun Arkananta<br><br>
 PrimeTest(); - Alun Arkananta<br><br>
