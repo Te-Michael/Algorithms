@@ -25,13 +25,13 @@ The tool that was used was the built in Intellij Coverage tool. We used the tool
 
 
 
-Fuction name: push();
+Fuction 1 name: push();
 
 https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
 <Provide a screenshot of the coverage results output by the instrumentation>
 ![no alt](readMeImages/branch1img2.png)
 <br>
-Fuction name: floydWarshall();
+Fuction 2 name: floydWarshall();
 
 https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3bb7ea790
 ![no alt](readMeImages/branch2img1.png)
@@ -43,7 +43,7 @@ https://github.com/Te-Michael/Algorithms/commit/95981628cbf280dfe113873be1c339e3
 
 <Group member name>
 
-testPush();<br>
+test 1: testPush();<br>
 ![no alt](readMeImages/testPush.png)
 <br>
 https://github.com/Te-Michael/Algorithms/commit/ae6de0d69f88bf22168d01f29e1e3aba0c443f8a
@@ -58,7 +58,7 @@ new coverage:
 <br><br>
 The reason the coverage was improved was due to the implementation of testPush for arrayStack. When the stack reached 16 it is supposed to double in capacity. However, nothing was testing that clause. The function testPush tests that case, and hence covers it. it goes from 2/3rds covered to 3/3rds covered
 <br><br>
-testNegativeCycle(); 
+test 2: testNegativeCycle(); 
 <br>
 ![no alt](readMeImages/testNegativeCycle.png)
 
@@ -79,14 +79,14 @@ The coverage here was improved due to the implementation of testNegativeCycle();
 
 ### Your own coverage tool
 
-Fuction name: slopePointToLine();
+Fuction 1 name: slopePointToLine();
 
 https://github.com/Te-Michael/Algorithms/commit/f4a8a3451debcaecc1d3eb70e4c042a0c33c6388
 <Provide a screenshot of the coverage results output by the instrumentation>
 ![no alt](readMeImages/odbranch1beforeimprovement.jpeg)
 <br>
 <br>
-Fuction name: binarySearch();
+Fuction 2 name: binarySearch();
 
 https://github.com/Te-Michael/Algorithms/commit/9da15378bceaedf5254d22cf15eaac09c679be1a
 ![no alt](readMeImages/odbranch2beforeimprovement.jpeg)
@@ -98,7 +98,7 @@ https://github.com/Te-Michael/Algorithms/commit/9da15378bceaedf5254d22cf15eaac09
 
 <Group member name>
 
-lineTest();<br>
+test 1: lineTest();<br>
 ![no alt](readMeImages/odbranch1tests.jpeg)
 <br>
 <br>
@@ -118,7 +118,7 @@ new coverage:
 <br><br>
 This function had no coverage at all before the implementation of lineTests. I had to create my own Class for testing and fill it myself. This was done with 3 tests, under normal (decided to test for positive instead of both negative and positive because that was enough for the tests), negative infinity and positive infinity assumptions. The tests basically check the behavior of the lines based on given slopes/assumptions and makes sure they behave correctly. These tests change the coverage from 0% 0/4 to 100% 4/4.
 <br><br>
-BinarySearchTest();
+test 2: BinarySearchTest();
 <br><br>
 ![no alt](readMeImages/odbranch2tests.jpeg)
 
@@ -146,12 +146,12 @@ The coverage in the function BinarySearch was improved with an introduction of t
 
 <The following is supposed to be repeated for each group member>
 
-Function 1: isPrime()
+Function 1 name: isPrime()
 https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f
 
 ![aa1primetestbefore.PNG](readMeImages/aa1primetestbefore.PNG)
 
-Function 2: intersection()
+Function 2 name: intersection()
 https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10
 
 ![aa2owncoveragetoolold.PNG](readMeImages/aa2owncoveragetoolold.PNG)
@@ -207,13 +207,13 @@ simplicity.
 # work by Hugo Sokolowski-Katzer
 ## Coverage measurement
 ### Your own coverage tool
-Function 1: mult()
+Function 1 name: mult()
 <br>
 https://github.com/Te-Michael/Algorithms/commit/90cfb1c6abe35cbc1a16b821d2a2fea467d2b227
 <br>
 ![no alt](readMeImages/mult.png)
 <br>
-Function 2: getPerpBisector()
+Function 2 name: getPerpBisector()
 <br>
 https://github.com/Te-Michael/Algorithms/commit/122523211956db409299cbc98d2229cf91ed905c
 <br>
@@ -222,7 +222,7 @@ https://github.com/Te-Michael/Algorithms/commit/122523211956db409299cbc98d2229cf
 ## Coverage improvement
 ### Individual tests
 
-testMultiply();
+Test 1: testMultiply();
 <br>
 ![no alt](readMeImages/multTest.png)
 <br>
@@ -239,7 +239,7 @@ after:
 The coverage is now 75%, this is an improvement since previously the coverage was 0%, the improvement is due to the fact that the test now forces the function to access almost all of its branches by giving various different polynomials to calculate
 <br>
 <br>
-testGetPerpBisector();
+Test 2: testGetPerpBisector();
 <br>
 ![no alt](readMeImages/bipTest.png)
 <br>
@@ -256,10 +256,14 @@ After:
 Here again the coverage started out at 0%, it is now 100%. This is because we created a test which provides two different pairs of points which force the function to traverse all its branches, the different points are necessary due to the branching conditions such as z < 0>
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
-
-< Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
-
+old coverage:
+<br>
+![no alt](readMeImages/branch1img1.png)
+<br>
+final coverage:
+<br>
+![no alt](readMeImages/final coverage.png)
+<br>
 
 ## Statement of individual contributions
 
