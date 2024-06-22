@@ -8,7 +8,6 @@
  * @author David Brink
  */
 package com.williamfiset.algorithms.math;
-import com.williamfiset.algorithms.CoverageTracker;
 
 public class FastFourierTransform {
 
@@ -60,20 +59,15 @@ public class FastFourierTransform {
   }
 
   private static long mult(long x, long y) {
-    CoverageTracker.setBranchReached(0);
     long z = x * y;
-    CoverageTracker.setBranchReached(1);
     if (z < 0) {
-      CoverageTracker.setBranchReached(2);
       z = z % p + q;
       return z < 0 ? z + p : z;
     }
     if (z < (1L << 56) && x > (1 << 28) && y > (1 << 28)) {
-      CoverageTracker.setBranchReached(3);
       z = z % p + q;
       return z < p ? z : z - p;
     }
-    CoverageTracker.setBranchReached(4);
     return z % p;
   }
 

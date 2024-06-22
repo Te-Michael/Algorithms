@@ -2,8 +2,6 @@ package com.williamfiset.algorithms.datastructures.stack;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;
-import java.util.*;
-import com.williamfiset.algorithms.CoverageTracker;
 
 /**
  * @author liujingkun
@@ -18,10 +16,6 @@ public class ArrayStack<T> implements Stack<T> {
     data = new Object[capacity];
   }
 
-  public int getCapacity() {
-    return capacity;
-  }
-
   @Override
   public int size() {
     return size;
@@ -34,19 +28,14 @@ public class ArrayStack<T> implements Stack<T> {
 
   @Override
   public void push(T elem) {
-    CoverageTracker.setBranchReached(0);
     if (size == capacity) {
-      CoverageTracker.setBranchReached(1);
       increaseCapacity();
     }
-    // Instrumentation: Set a flag before the first statement
-    CoverageTracker.setBranchReached(2);
     data[size++] = elem;
   }
 
   // Increase the capacity to store more elements.
   private void increaseCapacity() {
-    // Branch ID: 2
     capacity *= 2;
     data = Arrays.copyOf(data, capacity);
   }
@@ -66,6 +55,4 @@ public class ArrayStack<T> implements Stack<T> {
     if (isEmpty()) throw new EmptyStackException();
     return (T) data[size - 1];
   }
-
-
 }
