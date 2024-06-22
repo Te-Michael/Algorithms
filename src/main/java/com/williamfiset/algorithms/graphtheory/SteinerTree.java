@@ -10,8 +10,6 @@
  */
 package com.williamfiset.algorithms.graphtheory;
 
-import com.williamfiset.algorithms.CoverageTracker;
-
 import java.util.*;
 
 public class SteinerTree {
@@ -99,24 +97,17 @@ public class SteinerTree {
     for (int k = 0; k < n; k++)
       for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
-          if (distance[i][k] + distance[k][j] < distance[i][j]) {
-            CoverageTracker.setBranchReached(0); // Coverage flag for distance update
+          if (distance[i][k] + distance[k][j] < distance[i][j])
             distance[i][j] = distance[i][k] + distance[k][j];
-          }
 
     // Identify negative cycles (you can comment this
     // out if you know that no negative cycles exist)
     for (int k = 0; k < n; k++)
       for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
-          if (distance[i][k] + distance[k][j] < distance[i][j]) {
-            CoverageTracker.setBranchReached(1); // Coverage flag for detecting negative cycle
+          if (distance[i][k] + distance[k][j] < distance[i][j])
             distance[i][j] = Double.NEGATIVE_INFINITY;
-            CoverageTracker.setBranchReached(2); // Coverage flag for setting negative infinity
-          }
-
   }
-
 
   // Examples
   public static void main(String[] args) {
