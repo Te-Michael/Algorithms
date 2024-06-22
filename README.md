@@ -267,5 +267,15 @@ final coverage:
 
 ## Statement of individual contributions
 
-< describe what each group member did>
-
+the document clearly states which functions were done by whom via heading. 
+but to summarise:
+<br><br>
+testPush(); - Michael Tedeev<br><br>
+testNegativeCycle(); - Michael Tedeev<br><br>
+some functions in the line class - Oliwer Dembicki<br><br>
+BinarySearchTest(); - Oliwer Dembicki<br><br>
+some functions in the line class - Alun Arkananta<br><br>
+PrimeTest(); - Alun Arkananta<br><br>
+testMultiply(); - Hugo Sokolowski-Katzer<br><br>
+testGetPerpBisector(); - Hugo Sokolowski-Katzer<br><br>
+For everything else such as pull-requests , readme compilation, testing for coverage and lines everybody contributed hence it was a group effort
