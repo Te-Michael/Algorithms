@@ -9,36 +9,37 @@
  */
 package com.williamfiset.algorithms.search;
 
+import com.williamfiset.algorithms.CoverageTracker;
+
 import java.util.function.DoubleFunction;
 
 public class BinarySearch {
 
   // Comparing double values directly is bad practice.
   // Using a small epsilon value is the preferred approach
-  private static final double EPS = 0.00000001;
+  public static final double EPS = 0.00000001;
 
-  public static double binarySearch(
-      double lo, double hi, double target, DoubleFunction<Double> function) {
-
-    if (hi <= lo) throw new IllegalArgumentException("hi should be greater than lo");
+  public static double binarySearch(double lo, double hi, double target, DoubleFunction<Double> function) {
+    CoverageTracker.setBranchReached(0); // Branch ID for initial check
+    if (hi <= lo) {
+      throw new IllegalArgumentException("hi should be greater than lo");
+    }
 
     double mid;
+    CoverageTracker.setBranchReached(1); // Branch ID for loop entry
     do {
-
-      // Find the middle point
       mid = (hi + lo) / 2.0;
-
-      // Compute the value of our function for the middle point
-      // Note that f can be any function not just the square root function
       double value = function.apply(mid);
 
       if (value > target) {
+        CoverageTracker.setBranchReached(3); // Branch ID for value > target
         hi = mid;
       } else {
+        CoverageTracker.setBranchReached(4); // Branch ID for value <= target
         lo = mid;
       }
-
     } while ((hi - lo) > EPS);
+    CoverageTracker.setBranchReached(2); // Branch ID for loop condition
 
     return mid;
   }
