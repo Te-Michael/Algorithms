@@ -262,7 +262,7 @@ old coverage:
 <br>
 final coverage:
 <br>
-![no alt](readMeImages/final coverage.png)
+![no alt](readMeImages/finalcoverage.png)
 <br>
 
 ## Statement of individual contributions
