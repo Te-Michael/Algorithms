@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class LineTest {
     @Test
     public void testCoverage() {
-        CoverageTracker.setTotalBranches(14);
+        CoverageTracker.setTotalBranches(19);
         testSlopePointToLine();
         testSlopePointToLineNegativeInfinitySlope();
         testSlopePointToLinePositiveInfinitySlope();

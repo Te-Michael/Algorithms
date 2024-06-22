@@ -53,12 +53,12 @@ public class Line {
   // Normalize the line in general form
   public void normalise() {
     if (abs(b) < EPS) {
-      CoverageTracker.setBranchReached(0);
+      CoverageTracker.setBranchReached(9);
       c /= a;
       a = 1;
       b = 0;
     } else {
-      CoverageTracker.setBranchReached(1);
+      CoverageTracker.setBranchReached(10);
       a = (abs(a) < EPS) ? 0 : a / b;
       c /= b;
       b = 1;
@@ -71,23 +71,23 @@ public class Line {
 
     // Find middle point of segment
     Point2D middle = new Point2D.Double((x1 + x2) / 2.0, (y1 + y2) / 2.0);
-    CoverageTracker.setBranchReached(0);
+    CoverageTracker.setBranchReached(4);
 
     // The slope perpendicular to (y2-y1)/(x2-x1) is the negative
     // reciprocal or -(x2-x1)/(y2-y1) = (x1-x2)/(y2-y1)
     double perpSlope = (x1 - x2) / (y2 - y1);
-    CoverageTracker.setBranchReached(1);
+    CoverageTracker.setBranchReached(5);
 
     if (abs(y2 - y1) < EPS){
       perpSlope = Double.POSITIVE_INFINITY;
-      CoverageTracker.setBranchReached(2);
+      CoverageTracker.setBranchReached(6);
     }
     else if (abs(x1 - x2) < EPS){
       perpSlope = 0;
-      CoverageTracker.setBranchReached(3);
+      CoverageTracker.setBranchReached(7);
     }
 
-    CoverageTracker.setBranchReached(4);
+    CoverageTracker.setBranchReached(8);
     return slopePointToLine(perpSlope, middle);
   }
 
@@ -97,33 +97,33 @@ public class Line {
 
     l1.normalise();//Branches 0 & 1 are in normalise().
     l2.normalise();
-    CoverageTracker.setBranchReached(2);
+    CoverageTracker.setBranchReached(11);
 
     // Lines are parallel
     if (abs(l1.a - l2.a) < EPS && abs(l1.b - l2.b) < EPS) {
-      CoverageTracker.setBranchReached(3);
+      CoverageTracker.setBranchReached(12);
       return null;
     }
-    CoverageTracker.setBranchReached(4);
+    CoverageTracker.setBranchReached(13);
     double x = Double.NaN, y = Double.NaN;
     if (abs(l1.b) < EPS) {
-      CoverageTracker.setBranchReached(5);
+      CoverageTracker.setBranchReached(14);
       x = l1.c / l1.a;
       y = (l2.c - l2.a * x) / l2.b;
     } else if (abs(l2.b) < EPS) {
-      CoverageTracker.setBranchReached(6);
+      CoverageTracker.setBranchReached(15);
       x = l2.c / l2.a;
       y = (l1.c - l1.a * x) / l1.b;
     } else if (abs(l1.a) < EPS) {
-      CoverageTracker.setBranchReached(7);
+      CoverageTracker.setBranchReached(16);
       y = l1.c / l1.b;
       x = (l2.c - l2.b * y) / l2.a;
     } else if (abs(l2.a) < EPS) {
-      CoverageTracker.setBranchReached(8);
+      CoverageTracker.setBranchReached(17);
       y = l2.c / l2.b;
       x = (l1.c - l1.b * y) / l1.a;
     } else {
-      CoverageTracker.setBranchReached(9);
+      CoverageTracker.setBranchReached(18);
       x = (l1.c - l2.c) / (l1.a - l2.a);
       y = (l1.c - l1.a * x) / l1.b;
     }
