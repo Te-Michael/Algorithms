@@ -8,6 +8,7 @@ package com.williamfiset.algorithms.geometry;
 import static java.lang.Math.*;
 
 import java.awt.geom.Point2D;
+import com.williamfiset.algorithms.CoverageTracker;
 
 public class Line {
 
@@ -61,14 +62,23 @@ public class Line {
 
     // Find middle point of segment
     Point2D middle = new Point2D.Double((x1 + x2) / 2.0, (y1 + y2) / 2.0);
+    CoverageTracker.setBranchReached(0);
 
     // The slope perpendicular to (y2-y1)/(x2-x1) is the negative
     // reciprocal or -(x2-x1)/(y2-y1) = (x1-x2)/(y2-y1)
     double perpSlope = (x1 - x2) / (y2 - y1);
+    CoverageTracker.setBranchReached(1);
 
-    if (abs(y2 - y1) < EPS) perpSlope = Double.POSITIVE_INFINITY;
-    else if (abs(x1 - x2) < EPS) perpSlope = 0;
+    if (abs(y2 - y1) < EPS){
+      perpSlope = Double.POSITIVE_INFINITY;
+      CoverageTracker.setBranchReached(2);
+    }
+    else if (abs(x1 - x2) < EPS){
+      perpSlope = 0;
+      CoverageTracker.setBranchReached(3);
+    }
 
+    CoverageTracker.setBranchReached(4);
     return slopePointToLine(perpSlope, middle);
   }
 
