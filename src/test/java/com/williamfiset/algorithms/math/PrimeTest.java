@@ -1,10 +1,11 @@
 package com.williamfiset.algorithms.math;
-import com.williamfiset.algorithms.CoverageTracker;
-import org.junit.Test;
 
 import static com.williamfiset.algorithms.math.IsPrime.isPrime;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.williamfiset.algorithms.CoverageTracker;
+import org.junit.jupiter.api.*;
 
 public class PrimeTest {
     @Test
