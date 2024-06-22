@@ -1,4 +1,5 @@
 package com.williamfiset.algorithms.geometry;
+
 import com.williamfiset.algorithms.CoverageTracker;
 import org.junit.Test;
 
@@ -64,4 +65,3 @@ public class LineTest {
         assertEquals(intersection(l1, l2), new Point2D.Double(0.0, 0.0));
     }
 }
-
