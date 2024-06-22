@@ -161,7 +161,7 @@ https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7
 ### Individual tests
 
 Test 1: PrimeTest() https://github.com/Te-Michael/Algorithms/commit/094ae0ed94010054461d8d15bec99d3b5da3191f <br>
-![primetestfunction.PNG](readMeImages/primetestfunction.PNG)<br>
+![primetest.PNG](readMeImages/primetest.PNG)<br>
 
 Old coverage:<br>
 ![aa1coveragebefore.PNG](readMeImages/aa1coveragebefore.PNG)
@@ -178,7 +178,7 @@ to be zero as there was originally no test function in the test package.
 
 Test 2: LineTest.testCoverage() https://github.com/Te-Michael/Algorithms/commit/51bde4e28931c187ed74179dd474cda7812ddb10 <br>
 ![linetest1.PNG](readMeImages/linetest1.PNG)
-![linetest2.PNG](readMeImages/linetest2.PNG) <br>
+![linetest2.PNG](readMeImages/linetest2.PNG)<br>
 
 
 Old coverage: <br>
