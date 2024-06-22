@@ -3,16 +3,8 @@ package com.williamfiset.algorithms.geometry;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.williamfiset.algorithms.CoverageTracker;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-
 import java.awt.geom.Point2D;
-import java.util.stream.Stream;
-import java.util.Objects;
 import org.junit.jupiter.api.Test;
-
-import org.junit.Test;
 import static com.williamfiset.algorithms.geometry.Line.intersection;
 import static org.junit.Assert.*;
 
@@ -60,7 +52,9 @@ public class LineTest {
         Line expectedLine = new Line(new Point2D.Double(0, 0), new Point2D.Double(0, 1));
         Line result = Line.slopePointToLine(slope, point);
         assertThat(result.toString()).isEqualTo(expectedLine.toString());
-      
+
+    }
+    @Test
     public void testIntersectionSimple() {
         Line l1 = new Line(0.0,-2.0,0.0,2.0);
         Line l2 = new Line(-2.0,0.0,2.0,0.0);
