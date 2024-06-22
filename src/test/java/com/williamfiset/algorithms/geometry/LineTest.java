@@ -1,26 +1,67 @@
 package com.williamfiset.algorithms.geometry;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
 import com.williamfiset.algorithms.CoverageTracker;
+import org.junit.Test;
 
-class LineTest {
 
+import java.awt.geom.Point2D;
+import java.util.Objects;
+
+import static com.williamfiset.algorithms.geometry.Line.intersection;
+import static org.junit.Assert.*;
+
+public class LineTest {
     @Test
-    void testGetPerpBisector() {
-        CoverageTracker.setTotalBranches(5);
-
-        double x1 = 0, y1 = 0, x2 = 4, y2 = 0;
-        Line bisector1 = Line.getPerpBisector(x1, y1, x2, y2);
-        assertEquals("1.0x + 0.0y = 2.0", bisector1.toString());
-
-        x1 = 2; y1 = 1; x2 = 2; y2 = 5;
-        Line bisector2 = Line.getPerpBisector(x1, y1, x2, y2);
-        assertEquals("0.0x + 1.0y = 3.0", bisector2.toString());
-
+    public void testCoverage() {
+        CoverageTracker.setTotalBranches(10);
+        testIntersectionSimple();
+        testIntersectionSimple2();
+        testIntersectionParallel();
+        testIntersectionHorizontalL1();
+        testIntersectionHorizontalL2();
+        testIntersectionSkewed();
         CoverageTracker.writeCoverageToConsole();
-
     }
 
+    @Test
+    public void testIntersectionSimple() {
+        Line l1 = new Line(0.0,-2.0,0.0,2.0);
+        Line l2 = new Line(-2.0,0.0,2.0,0.0);
+        assertEquals(intersection(l1, l2), new Point2D.Double(0.0, 0.0));
+    }
+
+    @Test
+    public void testIntersectionSimple2() {
+        Line l2 = new Line(0.0,-2.0,0.0,2.0);
+        Line l1 = new Line(-2.0,0.0,2.0,0.0);
+        assertEquals(intersection(l1, l2), new Point2D.Double(0.0, 0.0));
+    }
+
+    @Test
+    public void testIntersectionParallel() {
+        Line l1 = new Line(0.0,0.0,1.0,0.0);
+        Line l2 = new Line(0.0,1.0,1.0,1.0);
+        assertNull(intersection(l1, l2));
+    }
+
+    @Test
+    public void testIntersectionHorizontalL1() {
+        Line l1 = new Line(0.0,0.0,1.0,0.0);
+        Line l2 = new Line(0.0,0.0,1.0,1.0);
+        assertEquals(intersection(l1, l2), new Point2D.Double(0.0, 0.0));
+    }
+
+    @Test
+    public void testIntersectionHorizontalL2() {
+        Line l1 = new Line(0.0,0.0,1.0,1.0);
+        Line l2 = new Line(0.0,0.0,1.0,0.0);
+        assertEquals(intersection(l1, l2), new Point2D.Double(0.0, 0.0));
+    }
+
+    @Test
+    public void testIntersectionSkewed() {
+        Line l1 = new Line(0.0,0.0,2.0,3.0);
+        Line l2 = new Line(0.0,0.0,3.0,2.0);
+        assertEquals(intersection(l1, l2), new Point2D.Double(0.0, 0.0));
+    }
 }
