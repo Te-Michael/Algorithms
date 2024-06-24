@@ -274,7 +274,7 @@ testPush(); - Michael Tedeev<br><br>
 testNegativeCycle(); - Michael Tedeev<br><br>
 testSlopePointToLine(), testSlopePointToLinePositiveInfinitySlope(), testSlopePointToLineNegativeInfinitySlope() in LineTest(); - Oliwer Dembicki<br><br>
 BinarySearchTest(); - Oliwer Dembicki<br><br>
-some functions in the line class - Alun Arkananta<br><br>
+testIntersectionSimple(), testIntersectionSimple2(), testIntersectionParallel(), testIntersectionHorizontalL1(), testIntersectionHorizontalL2(), testIntersectionSkewed(), in LineTest() - Alun Arkananta<br><br>
 PrimeTest(); - Alun Arkananta<br><br>
 testMultiply(); - Hugo Sokolowski-Katzer<br><br>
 testGetPerpBisector(); - Hugo Sokolowski-Katzer<br><br>
