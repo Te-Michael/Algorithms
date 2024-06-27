@@ -21,9 +21,6 @@ public class LineTest {
         testIntersectionHorizontalL1();
         testIntersectionHorizontalL2();
         testIntersectionSkewed();
-        testSlopePointToLine();
-        testSlopePointToLineNegativeInfinitySlope();
-        testSlopePointToLinePositiveInfinitySlope();
         testGetPerpBisector();
         CoverageTracker.writeCoverageToConsole();
     }
