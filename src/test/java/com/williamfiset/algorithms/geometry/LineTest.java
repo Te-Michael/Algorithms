@@ -24,6 +24,7 @@ public class LineTest {
         testSlopePointToLine();
         testSlopePointToLineNegativeInfinitySlope();
         testSlopePointToLinePositiveInfinitySlope();
+        testGetPerpBisector();
         CoverageTracker.writeCoverageToConsole();
     }
 
